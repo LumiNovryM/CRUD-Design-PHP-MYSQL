@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #161719;
+}
+
+.container{
+    display: flex;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    height: 663px;
+    width: 250px;
+    background-color: #1F2022;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar h5{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.sidebar h5 .biru{
+    color: #055BF3;
+    margin-right: 5px;
+}
+
+.sidebar h5 .putih{
+    color: white;
+}
+
+
+.sidebar .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: aqua; */
+    width: 200px;
+    margin-top: 10px;
+    border-top: 1px solid #5E5C5C;
+    border-bottom: 1px solid #5E5C5C;
+
+}
+
+.sidebar .menu .btn{
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .menu a{
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar .menu p{
+    padding: 20px;
+    color: white;
+}
+
+.menu ion-icon{
+    color: #055BF3;
+    font-size: 20px;
+}
+
+.sidebar .pre{
+    font-weight: 400;
+    color: white;
+    width: 170px;
+    border-bottom: 1px solid #5E5C5C;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sidebar .pre-child ion-icon{
+    color: #055BF3;
+    font-size: 25px;
+}
+
+.sidebar .pre-child{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .pre-child p{
+    padding: 20px;
+    color: white;
+}
+
+
+/* tabel */
+.tabel .header{
+    /* background-color: aqua; */
+    width: 1150px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header h2{
+    color: white;
+    font-weight: 400;
+}
+
+.header .overview{
+    width: 400px;
+    /* background-color: aquamarine; */
+    display: flex;
+}
+
+.header .overview button{
+    margin-left: 30px;
+}
+
+.header .search{
+    /* background-color: aqua; */
+    width: 550px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* .search button{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: #055BF3;
+    font-size: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.tabel .header .search input[type="text"]{
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 10px;
+    height: 20px;
+    width: 500px;
+    padding: 10px;
+    background-color: #1F2022;
+}
+
+.tabel .content{
+    margin: 20px;
+    box-sizing: border-box;
+    background-color: #1F2022;
+    height: 560px;
+    width: 1110px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .header{
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #292B2F;
+    margin: 10px;
+    width: 1080px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .header h4{
+    color: white;
+    font-weight: 400;
+}
+
+.content .header button{
+    border: none;
+    background-color: #055BF3;
+    padding: 5px 15px ;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.content .tampil{
+    display: flex;
+    justify-content: center;
+    /* background-color: aqua; */
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.content .tampil table{
+    /* border-collapse: collapse; */
+    width: 1070px;    
+    margin: 20px 0;
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+}
+
+.content .tampil table .head{
+    background-color: #32353A; 
+    color: white;
+    text-align: left;
+}
+
+.content .tampil table th,
+.content .tampil table td{
+    padding: 12px 15px;
+    color: white;
+}
+
+.content .tampil table tr:nth-of-type(even){
+    background-color: #292B2F;
+}
+
+
+.content .tampil .edit{
+    color: #DF0707;
+    font-size: 20px;
+}
+
+.content .tampil .hapus {
+    color: #055BF3;
+    font-size: 20px;
+}
+
+.content .tampil .btn{
+    display: flex;
+    /* background-color: aqua; */
+    width: 40px;
+    justify-content: space-around;
+}
