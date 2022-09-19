@@ -42,7 +42,7 @@ if(mysqli_num_rows($query) < 1){
             <h5 class="pre" >Preferences</h5>
             <div class="pre-child">
                 <ion-icon name="sunny"></ion-icon>
-                <p>Light Mode</p>
+                <p>Dark Mode</p>
             </div>
         </div>
         <!-- SIDEBAR -->
