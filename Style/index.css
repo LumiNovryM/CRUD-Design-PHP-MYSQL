@@ -175,7 +175,7 @@ body{
     padding: 10px;
     background-color: #292B2F;
     margin: 10px;
-    width: 1080px;
+    width: 1090px;
     border-radius: 15px;
     display: flex;
     justify-content: space-between;
@@ -184,6 +184,7 @@ body{
 .content .header h4{
     color: white;
     font-weight: 400;
+    font-size: 19px;
 }
 
 .content .header button{
@@ -243,3 +244,82 @@ body{
     width: 40px;
     justify-content: space-around;
 }
+
+/* Card */
+
+.content .parent-card{
+    box-sizing: border-box;
+    /* padding: 10px; */
+    margin: 5px 10px 10px 10px ;
+    width: 1090px;
+    height: 600px;
+    background-color: #292B2F;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.parent-card .header{
+    background-color: #32353A;
+    width: 1070px;
+    border-radius: 15px;
+}
+
+.parent-card .header p{
+    color: white;
+    font-weight: 400;
+}
+.parent-card .card{
+    width: 300px;
+    height: 120px;
+    background-color: #32353A;
+    margin: 20px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    position: relative;
+    
+}
+
+.para-card{
+    display: flex;
+    width: 1070px;
+    margin: 10px;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.card .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.card .icon ion-icon{
+    font-size: 80px;
+    color: aliceblue;
+    background-color: #055BF3;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.card .teks{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card .teks .top{
+    color: white;
+    position: absolute;
+    top: 10px;
+    font-size: 18px;
+}
+
+.card .teks .bottom{
+    color: #336dd1;
+    font-size: 32px;
+}
+

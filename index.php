@@ -2,6 +2,14 @@
 // Koneksi ke database
 include 'connect.php';
 
+// Get data
+$get_data_siswa = mysqli_query($connect,"SELECT * FROM data_siswa");
+$count_data_siswa = mysqli_num_rows($get_data_siswa); // Menghitung seluruh kolom
+
+// Get data
+$get_data_buku = mysqli_query($connect,"SELECT * FROM data_buku");
+$count_data_buku = mysqli_num_rows($get_data_buku); // Menghitung seluruh kolom
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,26 +24,26 @@ include 'connect.php';
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <!-- ICO -->
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="ico/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch--precomposed" sizes="60x60" href="ico/apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="ico/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="ico/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152"icon href="ico/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="ico/favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="ico/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="ico/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="ico/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="ico/favicon-128.png" sizes="128x128" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="Ico/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="Ico/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="Ico/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="Ico/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="Ico/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="Ico/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="Ico/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="Ico/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="Ico/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="Ico/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="Ico/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="Ico/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="Ico/favicon-128.png" sizes="128x128" />
     <meta name="application-name" content="&nbsp;"/>
     <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
-    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
-    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
-    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
-    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <meta name="msapplication-TileImage" content="Ico/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="Ico/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="Ico/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="Ico/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="Ico/mstile-310x310.png" />  
 
 </head>
 <body>
@@ -80,7 +88,40 @@ include 'connect.php';
                     </form>
                    </div>
                 </div>
-                
+                <div class="parent-card">
+                    <div class="header">
+                        <p>Data Overview</p>
+                    </div>
+                    <div class="para-card">
+                        <div class="card">
+                        <div class="icon">
+                        <ion-icon name="person"></ion-icon>
+                        </div>
+                        <div class="teks">
+                            <p class="top">Siswa</p>
+                            <p class="bottom"><?= $count_data_siswa ?></p>
+                        </div>
+                        </div>
+                        <div class="card">
+                            <div class="icon">
+                            <ion-icon name="book"></ion-icon>
+                            </div>
+                            <div class="teks">
+                                <p class="top">Buku</p>
+                                <p class="bottom"><?= $count_data_buku ?></p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="icon">
+                                <ion-icon name="person"></ion-icon>
+                            </div>
+                            <div class="teks">
+                                <p class="top">Visitor</p>
+                                <p class="bottom">1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
         </div>
